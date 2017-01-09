@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Stintose">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Hexo Source."/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Stintose Studios"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://stintosestudios.github.ioundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Stintose Studios" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Stintose Studios</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/mybanner.png)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Hexo Source.</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Blog
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/forframe">
+                  
+                  GIF
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/stintosestudios">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Stintose</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-01-09</span>
+            <span class="time">13:44:12</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Hexo/">Hexo</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Hexo/">#Hexo</a> <a class="tag" href="/tags/js/">#js</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="So-hexo-is-kindof-cool"><a href="#So-hexo-is-kindof-cool" class="headerlink" title="So hexo is kindof cool."></a>So hexo is kindof cool.</h1><p>I just started useing the node.js powered static site generater called <a href="https://hexo.io/" target="_blank" rel="external">hexo</a>. I have been running into a few bugs with it, but over all it seems to work well for what I want it to do. I thought I would write a quick blog post about the hexo source folder, and how I am handlying my source and deployment. Even if noone reads it, it is important to write about stuff like this for my one note sort of speak.</p>
+<a id="more"></a>
+<h1 id="About-the-hexo-source-folder"><a href="#About-the-hexo-source-folder" class="headerlink" title="About the hexo source folder"></a>About the hexo source folder</h1><p>Hexo builds a static web site based off of content that is stored in a source folder. I write my blog posts in markdown, and then run a command that processes the content there into a collection of html files, and assests that are copyed over into a public folder. The root contents of that folder is what will then need to be hosted by some means. As of this writing I am just copying the files over to my <a href="https://github.com/stintosestudios/stintosestudios.github.io" target="_blank" rel="external">github pages reposatory</a>.</p>
+<h1 id="Pulling-the-source-away-from-the-deployment"><a href="#Pulling-the-source-away-from-the-deployment" class="headerlink" title="Pulling the source away from the deployment."></a>Pulling the source away from the deployment.</h1><p>I first thought that it would be great to just have everything togearther in a single reposatory. That way both the source and public html will all be togeather in one nice neet little package. However I have desited to keep things seperate into source, and deplyment reposatories.</p>
+<p>So I have to reposatories:</p>
+<ul>
+<li><a href="https://github.com/stintosestudios/hexo_sitesource" target="_blank" rel="external">hexo_sitesource</a> (the source)</li>
+<li><a href="https://github.com/stintosestudios/stintosestudios.github.io" target="_blank" rel="external">stintosestudios.github.io</a> (the deployment)</li>
+</ul>
+<p>This is the way I am handleing it for now, for better or worse.</p>
+<h1 id="step-one-clone-in-the-source"><a href="#step-one-clone-in-the-source" class="headerlink" title="step one : clone in the source"></a>step one : clone in the source</h1><p>Assuming I have both node.js, and git installed the first thing I will want to do is have an up to date copy of the sites source code. I should always have an up to date local copy on my computer, but if not I will want to clone it in.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/stintosestudios/hexo_sitesource</div></pre></td></tr></table></figure>
+<h1 id="step-two-install-the-dependencies"><a href="#step-two-install-the-dependencies" class="headerlink" title="step two : install the dependencies"></a>step two : install the dependencies</h1><p>I do not store copys of the node dependencies in the reposatorie, however I do store a package.json file that can be used to quickly install eveything that is needed.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> hexo_sitesource</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<h1 id="step-three-generate-the-public-folder"><a href="#step-three-generate-the-public-folder" class="headerlink" title="step three : generate the public folder"></a>step three : generate the public folder</h1><p>Assuming that the git folder is up to date, and all the dependencies are installed in the node_modules folder, I should now be able to generate my site.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>If all goes well there should be a public folder now.</p>
+<h1 id="Running-the-site-locally"><a href="#Running-the-site-locally" class="headerlink" title="Running the site locally"></a>Running the site locally</h1><p>In my source folder I have placed a simple server.js file that can be used to host the site locally via node.js. To use it I just need to cd into the public folder, and fire it up with node.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> public</div><div class="line">$ node server.js</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
