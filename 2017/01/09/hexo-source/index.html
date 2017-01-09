@@ -101,7 +101,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-01-09</span>
-            <span class="time">13:44:12</span>
+            <span class="time">15:30:46</span>
           </span>
           
           <!--  Categories  -->
@@ -123,7 +123,7 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="So-hexo-is-kindof-cool"><a href="#So-hexo-is-kindof-cool" class="headerlink" title="So hexo is kindof cool."></a>So hexo is kindof cool.</h1><p>I just started useing the node.js powered static site generater called <a href="https://hexo.io/" target="_blank" rel="external">hexo</a>. I have been running into a few bugs with it, but over all it seems to work well for what I want it to do. I thought I would write a quick blog post about the hexo source folder, and how I am handlying my source and deployment. Even if noone reads it, it is important to write about stuff like this for my one note sort of speak.</p>
+          <h1 id="So-hexo-is-kindof-cool"><a href="#So-hexo-is-kindof-cool" class="headerlink" title="So hexo is kindof cool."></a>So hexo is kindof cool.</h1><p>I just started useing the node.js powered static site generater called <a href="https://hexo.io/" target="_blank" rel="external">hexo</a>. I have been running into a few bugs with it, but over all it seems to work well for what I want it to do. I thought I would write a quick blog post about the hexo source folder, and how I am handlying my source and deployment. Even if no one reads it, it is important to write about stuff like this for my own notes sort of speak.</p>
 <a id="more"></a>
 <h1 id="About-the-hexo-source-folder"><a href="#About-the-hexo-source-folder" class="headerlink" title="About the hexo source folder"></a>About the hexo source folder</h1><p>Hexo builds a static web site based off of content that is stored in a source folder. I write my blog posts in markdown, and then run a command that processes the content there into a collection of html files, and assests that are copyed over into a public folder. The root contents of that folder is what will then need to be hosted by some means. As of this writing I am just copying the files over to my <a href="https://github.com/stintosestudios/stintosestudios.github.io" target="_blank" rel="external">github pages reposatory</a>.</p>
 <h1 id="Pulling-the-source-away-from-the-deployment"><a href="#Pulling-the-source-away-from-the-deployment" class="headerlink" title="Pulling the source away from the deployment."></a>Pulling the source away from the deployment.</h1><p>I first thought that it would be great to just have everything togearther in a single reposatory. That way both the source and public html will all be togeather in one nice neet little package. However I have desited to keep things seperate into source, and deplyment reposatories.</p>
@@ -140,14 +140,14 @@
 <h1 id="step-three-generate-the-public-folder"><a href="#step-three-generate-the-public-folder" class="headerlink" title="step three : generate the public folder"></a>step three : generate the public folder</h1><p>Assuming that the git folder is up to date, and all the dependencies are installed in the node_modules folder, I should now be able to generate my site.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
 <p>If all goes well there should be a public folder now.</p>
-<h1 id="Running-the-site-locally"><a href="#Running-the-site-locally" class="headerlink" title="Running the site locally"></a>Running the site locally</h1><p>In my source folder I have placed a simple server.js file that can be used to host the site locally via node.js. To use it I just need to cd into the public folder, and fire it up with node.</p>
+<h1 id="Running-the-generated-site-locally"><a href="#Running-the-generated-site-locally" class="headerlink" title="Running the generated site locally"></a>Running the generated site locally</h1><p>it is sometimes nice to be able to view the site locally via the http:// protocal rather then file:// to make sure that everything is looking good before deployment. To do this in my source folder I have wrote a simple server.js that can be used to host the site locally via node.js. To use it I just need to cd into the public folder, and fire it up with node.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> public</div><div class="line">$ node server.js</div></pre></td></tr></table></figure>
+<h1 id="updaing-the-source"><a href="#updaing-the-source" class="headerlink" title="updaing the source"></a>updaing the source</h1>
         </div>
       </div>
     </div>
   </div>
 </article>
-
 
 
     <!-- Footer -->
@@ -177,6 +177,19 @@
     });
   });
 </script>
+
+
+    <!-- google analytics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90092106-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 
   </body>
 </html>
