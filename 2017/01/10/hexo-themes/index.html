@@ -1,84 +1,190 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Stintose Studios</title>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Stintose">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Hexo Themes."/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Stintose Studios"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://stintosestudios.github.ioundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Stintose Studios" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-    <!-- global css -->
-    <link rel="stylesheet" href="/css/global.css">
+  <!-- Site Title -->
+  <title>Stintose Studios</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
 
 </head>
-<body>
 
-    <div class="container_main">
+  <body>
+    <!-- Page Header -->
 
-    
 
-        <div class="container_header" style="background-image: url(/img/banner_320_branded.png)">
-
-            <!-- menu links -->
-            <p class="menu_navbar">
-            
-
-                <a class="menu_link" href="/" >Home</a>
-
-            
-
-                <a class="menu_link" href="/archives" >Blog</a>
-
-            
-
-                <a class="menu_link" href="/forframe" >GIF</a>
-
-            
-
-                <a class="menu_link" href="https://github.com/stintosestudios" >Github</a>
-
-            
-            </p>
-
+<header class="site-header header-background" style="background-image: url(/img/banner_480_white.png)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Hexo Themes.</p>
+          <p class="subtitle"></p>
         </div>
-
-        <div class="container_content">
-
-            <div>
-    <h1 class="text_post_title" >Hexo Themes.</h1>
-    <div>
-        2017-01-10 
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Blog
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/forframe">
+                  
+                  GIF
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/stintosestudios">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
     </div>
-    <h1 id="Hexo-Themes-how-to"><a href="#Hexo-Themes-how-to" class="headerlink" title="Hexo Themes how to"></a>Hexo Themes how to</h1><p>I thought I would put togeather a little something to help remind me on how to go about putting togeather a hexo.io theme. As of this writing I have put togeather my first hexo theme for this site called “dark_and_cool”, and I would like to rmemeber how to do this as I will like to keep making more themes now and then until I get something I like. </p>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Stintose</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-01-10</span>
+            <span class="time">18:00:57</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Hexo/">Hexo</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Hexo/">#Hexo</a> <a class="tag" href="/tags/js/">#js</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="Hexo-themes-how-to"><a href="#Hexo-themes-how-to" class="headerlink" title="Hexo themes how to"></a>Hexo themes how to</h1><p>I thought I would put togeather a little something to help remind me on how to go about putting togeather a hexo.io theme. As of this writing I have put togeather my first hexo theme for this site called “dark_and_cool”, and I would like to rmemeber how to do this as I will like to keep making more themes now and then until I get something I like.</p>
 <a id="more"></a>
-<h1 id="getting-started"><a href="#getting-started" class="headerlink" title="getting started"></a>getting started</h1><p>You will start by creating a folder that is the name of your theme in the theme folder of your hexo root path. Inside that folder you will have a layout folder, as well as a _config.yml file.</p>
-<h1 id="layout-ejs"><a href="#layout-ejs" class="headerlink" title="layout.ejs"></a>layout.ejs</h1><p>So the most important ejs file that will be placed in the layout folder is the layout.ejs file. This is the ejs that will be used accross all pages.</p>
+<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><p>I will start by creating a folder that is the name of my theme in the theme folder of my hexo root path. Inside that folder I will have a _config.yml file, as well as a layout folder. I will also want some additional folders and files in there as well but for now I will just cover the most importent stuff needed to get just get started.</p>
+<h2 id="The-config-yml-file"><a href="#The-config-yml-file" class="headerlink" title="The _config.yml file"></a>The _config.yml file</h2><p>The name should say it all, and yes this is where I will be setting up my configuration for the theme.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Header Menu</span></div><div class="line"><span class="attr">menu:</span></div><div class="line"><span class="attr">  Home:</span> /</div><div class="line"><span class="attr">  Blog:</span> /archives</div><div class="line"><span class="attr">  GIF:</span> /forframe</div><div class="line"><span class="attr">  Github:</span> https://github.com/stintosestudios</div><div class="line"> </div><div class="line"><span class="comment"># disable banner</span></div><div class="line"><span class="attr">use_header_cover:</span> <span class="literal">true</span></div><div class="line"> </div><div class="line"><span class="comment"># URL of the banner image at source/img/</span></div><div class="line"><span class="attr">index_cover:</span> /img/banner_320_branded.png</div><div class="line"> </div><div class="line"><span class="attr">widgets:</span></div><div class="line"><span class="bullet">-</span> category</div><div class="line"><span class="bullet">-</span> tag</div><div class="line"><span class="bullet">-</span> archive</div><div class="line"> </div><div class="line"><span class="comment"># widget behavior</span></div><div class="line"><span class="attr">archive_type:</span> <span class="string">'monthly'</span></div><div class="line"><span class="attr">show_count:</span> <span class="literal">false</span></div><div class="line"> </div><div class="line"><span class="comment"># favicon</span></div><div class="line"><span class="attr">favicon:</span> /favicon.png</div><div class="line"> </div><div class="line"><span class="comment"># Google Analytics Tracking ID</span></div><div class="line"><span class="attr">google_analytics:</span> UA<span class="bullet">-90092106</span><span class="bullet">-1</span></div></pre></td></tr></table></figure>
+<h2 id="The-layout-folder"><a href="#The-layout-folder" class="headerlink" title="The layout folder."></a>The layout folder.</h2><p>This is where I will have all my *ejs file’s that are used for rendering all the pages in the static site.</p>
+<h3 id="layout-ejs"><a href="#layout-ejs" class="headerlink" title="layout.ejs"></a>layout.ejs</h3><p>So the most important ejs file that will be placed in the layout folder is the layout.ejs file. This is the ejs that will be used accross all pages.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"> </div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">   <span class="comment">&lt;!-- global css --&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">%-</span> <span class="attr">css</span>('<span class="attr">css</span>/<span class="attr">global.css</span>') %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container_main"</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">%</span></span></div><div class="line">      <span class="attr">var</span> <span class="attr">headerStyle</span> = <span class="string">''</span>;</div><div class="line">        <span class="attr">if</span> (<span class="attr">theme.use_header_cover</span>) &#123;</div><div class="line">            <span class="attr">headerStyle</span> = <span class="string">'background-image: url('</span> + <span class="attr">theme.index_cover</span> + ')';</div><div class="line">        &#125;</div><div class="line">    %&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container_header"</span> <span class="attr">style</span>=<span class="string">"&lt;%= headerStyle %&gt;"</span>&gt;</span></div><div class="line">            <span class="comment">&lt;!-- menu links --&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"menu_navbar"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">var</span> <span class="attr">i</span> <span class="attr">in</span> <span class="attr">theme.menu</span>)&#123; %&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"menu_link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menu[i]) %&gt;"</span> &gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">i</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container_content"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%-</span> <span class="attr">body</span> %&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">google-analytics</span>') %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-</div>
-
+<h3 id="index-ejs"><a href="#index-ejs" class="headerlink" title="index.ejs"></a>index.ejs</h3><p>This is what will be rendered on the main root namesapce of the site.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">config.author</span>)&#123; %&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.author</span> %&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">config.subtitle</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.subtitle</span> %&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line"> </div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span>(<span class="attr">post</span>)&#123; %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">h3</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(post.path) %&gt;"</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">%=</span> <span class="attr">post.title</span> %&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">%=</span> <span class="attr">date</span>(<span class="attr">post.date</span>, <span class="attr">config.date_format</span>) %&gt;</span> </div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"> </div><div class="line">            <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.excerpt</span>) &#123; %&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.excerpt</span> %&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="archive-ejs"><a href="#archive-ejs" class="headerlink" title="archive.ejs"></a>archive.ejs</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"</span>&gt;</span></div><div class="line"> </div><div class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span>(<span class="attr">post</span>)&#123; %&gt;</span></div><div class="line"> </div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"archive-item"</span>&gt;</span></div><div class="line"> </div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(post.path) %&gt;"</span> <span class="attr">class</span>=<span class="string">"post-title"</span>&gt;</span></div><div class="line"> </div><div class="line">                <span class="tag">&lt;<span class="name">%=</span> <span class="attr">post.title</span> || <span class="attr">__</span>('<span class="attr">untitled_post</span>') %&gt;</span></div><div class="line"> </div><div class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"> </div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"date text-muted"</span>&gt;</span>Posted on <span class="tag">&lt;<span class="name">%=</span> <span class="attr">full_date</span>(<span class="attr">post.date</span>) %&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"> </div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"> </div><div class="line">    <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></div><div class="line"> </div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="page-ejs"><a href="#page-ejs" class="headerlink" title="page.ejs"></a>page.ejs</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">page.content</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="post-ejs"><a href="#post-ejs" class="headerlink" title="post.ejs"></a>post.ejs</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"text_post_title"</span> &gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">page.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%=</span> <span class="attr">date</span>(<span class="attr">page.date</span>, <span class="attr">config.date_format</span>) %&gt;</span> </div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">page.content</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line">## <span class="selector-tag">The</span> <span class="selector-tag">source</span> <span class="selector-tag">folder</span></div><div class="line"> </div><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">background</span>:<span class="number">#000000</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#00afaf</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-class">.container_main</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">width</span>:<span class="number">80%</span>;</div><div class="line">    <span class="attribute">margin-left</span>:<span class="number">10%</span>;</div><div class="line">    <span class="attribute">background</span>:<span class="number">#0f0f0f</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-class">.container_header</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">background-size</span>:<span class="number">100%</span> <span class="number">200px</span>;</div><div class="line"> </div><div class="line">    <span class="attribute">display</span>:table;</div><div class="line">    <span class="attribute">height</span>:<span class="number">200px</span>;</div><div class="line">    <span class="attribute">width</span>:<span class="number">100%</span>;</div><div class="line">    <span class="attribute">background-color</span>:<span class="number">#2a2a2a</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-class">.container_content</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">padding</span>:<span class="number">50px</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-class">.container_footer</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">background</span>:<span class="number">#1a1a1a</span>;</div><div class="line">    <span class="attribute">text-align</span>:center;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-class">.menu_navbar</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">text-align</span>:center;</div><div class="line">    <span class="attribute">display</span>: table-cell;</div><div class="line">    <span class="attribute">vertical-align</span>: bottom;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-class">.menu_link</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">font-family</span>:arial;</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">20pt</span>;</div><div class="line">    <span class="attribute">background</span>:<span class="number">#000000</span>;</div><div class="line">    <span class="attribute">margin</span>:<span class="number">5px</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-class">.text_post_title</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">font-size</span>:<span class="number">24pt</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">/* forframe */</span></div><div class="line"> </div><div class="line"><span class="selector-class">.forframe_thumb_container</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">text-align</span>:center;</div><div class="line">    <span class="attribute">margin-right</span>:auto;</div><div class="line">    <span class="attribute">margin-left</span>:auto;</div><div class="line">    <span class="attribute">width</span>:<span class="number">320px</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-class">.forframe_thumb_link</span>&#123;&#125;</div><div class="line"><span class="selector-class">.forframe_thumb_img</span>&#123;</div><div class="line"> </div><div class="line">    <span class="attribute">padding</span>:<span class="number">5px</span>;</div><div class="line"> </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span>&#123;<span class="attribute">color</span>:<span class="number">#00ffff</span>;&#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>&#123;<span class="attribute">color</span>:<span class="number">#00ffff</span>;&#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;<span class="attribute">color</span>:<span class="number">#ffffff</span>;&#125;</div></pre></td></tr></table></figure>
         </div>
-
-    
-<div class="container_footer">
-
-    <p>Theme <a href="https://github.com/stintosestudios/hexo_sitesource/tree/master/themes/dark_and_cool">&#34;dark_and_cool&#34;</a> by <a href="https://github.com/stintosestudios">stintose</a></p>
-    <p>Powered by <a href="https://hexo.io">hexo.io</a></p>
-
-</div>
-
+      </div>
     </div>
+  </div>
+</article>
 
 
-    
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+    <!-- google analytics-->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-90092106-1', 'auto');
-        ga('send', 'pageview');
+      ga('create', 'UA-90092106-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
 
-
-
-</body>
+  </body>
 </html>
 

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Stintose">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="GIF Repeating backgrounds."/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Stintose Studios"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://stintosestudios.github.ioundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Stintose Studios" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>Stintose Studios</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner_480_white.png)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">GIF Repeating backgrounds.</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Blog
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/forframe">
+                  
+                  GIF
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/stintosestudios">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Stintose</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-01-11</span>
+            <span class="time">18:00:57</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/GIF/">GIF</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/js/">#js</a> <a class="tag" href="/tags/gif/">#gif</a> <a class="tag" href="/tags/forframe/">#forframe</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="Repeating-Backgrounds"><a href="#Repeating-Backgrounds" class="headerlink" title="Repeating Backgrounds"></a>Repeating Backgrounds</h1><p>Something that comes up a lot when making a GIF of mine is to have a looping background. I Often see this kind of thing in about every cartoon ever made, so of course this is something that I run into now and then. After making a few GIF’s I was able to get this simple, but timeless animation trick somewhat solid, and have found that one method of getting it done is perhaps a bit more professional than the other.</p>
+<a id="more"></a>
+<h1 id="The-crude-but-effective-way"><a href="#The-crude-but-effective-way" class="headerlink" title="The crude, but effective way."></a>The crude, but effective way.</h1><p>When it comes to making my animations I don’t care that much if things are done in a crude yet effective way. All I care about is that my collection of frames comes out the way that I want it. Once the finished product is furnished to GIF, or whatever container format, sloppy code is fine as long as it gets the job done.</p>
+<p>So the crude yet effective way is to just make it so the background image is for the most part seamless but with an additional part at the beginning or end that is the same as the other side of the image. In other words, I make it so I can just simply loop around with the same square area with the use of just one ctx.drawImage call.</p>
+<h1 id="The-complicated-but-more-elegant-way"><a href="#The-complicated-but-more-elegant-way" class="headerlink" title="The complicated, but more elegant way"></a>The complicated, but more elegant way</h1><!-- ![repeating background](/img/footback_1_320.gif) -->
+<img class="forframe_lone_gif" src="https://raw.githubusercontent.com/stintosestudios/forFrame_collection_1_5_3/master/projects/footback/gif/gif_1_320.gif">
+<p>The above gif should illustrates why this approach is a bit more complicated, but is a little more elegant in that it allows for me to work directly with a single seamless image. Which can be seen as an improvement of sorts compared to that of having the beginning part append to the end of it as I do with the crude yet effective way that I have described earlier.</p>
+<p>For the most part I just grab whatever the current part of the background is, however things get a little involved when it comes to looping around back to the beginning. As such at any point in the looping of the background I will need to figure out as many as 16 variables involving that involve getting the appropriate beginning and ending parts of the seamless image, and placing them both in the proper locations when rendering. </p>
+<p>To help with this, I have put together the following helper function.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> backgroundData = <span class="function"><span class="keyword">function</span> (<span class="params">state</span>) </span>&#123;</div><div class="line"> </div><div class="line">    <span class="keyword">var</span> sx,</div><div class="line">    draws = [];</div><div class="line"> </div><div class="line">    <span class="comment">// find source x pointer, and scaled version</span></div><div class="line">    sx = (state.source.tw - state.source.vw) - state.source.tw * state.percent;</div><div class="line">    x = sx * (state.drawTo.tw / state.source.tw);</div><div class="line"> </div><div class="line">    <span class="comment">// if sx is greater then 0, then we only need one ctx.drawImage call</span></div><div class="line">    <span class="keyword">if</span> (sx &gt; <span class="number">0</span>) &#123;</div><div class="line"> </div><div class="line">        <span class="comment">// just part 1</span></div><div class="line">        draws.push(&#123;</div><div class="line"> </div><div class="line">            <span class="attr">sx</span> : sx,</div><div class="line">            <span class="attr">sy</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">sw</span> : state.source.vw,</div><div class="line">            <span class="attr">sh</span> : state.source.vh,</div><div class="line"> </div><div class="line">            <span class="attr">dx</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">dy</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">dw</span> : state.drawTo.vw,</div><div class="line">            <span class="attr">dh</span> : state.drawTo.vh</div><div class="line"> </div><div class="line">        &#125;);</div><div class="line"> </div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line"> </div><div class="line">        <span class="comment">// else we need two draw operations</span></div><div class="line"> </div><div class="line">        <span class="comment">// part 1</span></div><div class="line">        draws.push(&#123;</div><div class="line"> </div><div class="line">            <span class="attr">sx</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">sy</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">sw</span> : state.source.vw + sx,</div><div class="line">            <span class="attr">sh</span> : state.source.vh,</div><div class="line"> </div><div class="line">            <span class="attr">dx</span> : <span class="built_in">Math</span>.abs(x),</div><div class="line">            <span class="attr">dy</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">dw</span> : state.drawTo.vw + x,</div><div class="line">            <span class="attr">dh</span> : state.drawTo.vh</div><div class="line"> </div><div class="line">        &#125;);</div><div class="line"> </div><div class="line">        <span class="comment">// part 2</span></div><div class="line">        draws.push(&#123;</div><div class="line"> </div><div class="line">            <span class="attr">sx</span> : state.source.tw + sx,</div><div class="line">            <span class="attr">sy</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">sw</span> : <span class="built_in">Math</span>.abs(sx),</div><div class="line">            <span class="attr">sh</span> : state.source.vh,</div><div class="line"> </div><div class="line">            <span class="attr">dx</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">dy</span> : <span class="number">0</span>,</div><div class="line">            <span class="attr">dw</span> : <span class="built_in">Math</span>.abs(x),</div><div class="line">            <span class="attr">dh</span> : state.drawTo.vh</div><div class="line"> </div><div class="line">        &#125;);</div><div class="line"> </div><div class="line">    &#125;;</div><div class="line"> </div><div class="line">    <span class="keyword">return</span> draws;</div><div class="line"> </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+    <!-- google analytics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90092106-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>
+
